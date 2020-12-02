@@ -64,7 +64,7 @@ function gettingJSON(){
         document.querySelector("#loc").innerHTML = loc;
 
         temp = json["main"]["temp"];
-        document.querySelector("#temp").innerHTML = temp;
+        document.querySelector("#temp").innerHTML = temp + " with " + json['weather'][0]['description'];
 
         var link = "http://openweathermap.org/img/wn/" + json['weather'][0]['icon'] + ".png";
         var txt = json['weather'][0]['description'];
