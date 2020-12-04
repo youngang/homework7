@@ -17,16 +17,11 @@ function gettingJSON(){
 
     //set default temperature format to fahrenheit if one isn't provided
     let format;
-    
-    buttons = document.querySelectorAll('input[name="temp"]');
-    var boo = false;
-    for (butt of buttons) {
-        if (butt.checked) {
-            boo = true;
-            format = butt.value;
-        }
+
+    if(document.querySelector("#celcius").checked == true){
+        format = "metric";
     }
-    if(boo == false){
+    else{
         format = "imperial";
     }
 
